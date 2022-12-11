@@ -18,8 +18,32 @@ int main() {
 }
 
 int strInsert(char str1[], const char str2[], int pos) {
+    
+    int len_str1 = strlen(str1);
+    int len_str2 = strlen(str2);
 
-    if pos
+    int len_arr_str1 = sizeof(str1)/sizeof(str1[0]);
 
-    /* TODO: your code goes here */
+    if(pos < 0 ||
+        pos > len_str1 + 1 ||
+        len_str1 + len_str2 > len_arr_str1) return -1;
+    
+
+    // Make space
+    char *it1 = str1 + len_str1 - 1;
+    
+    for(int i = len_str1 - pos; i != 0; i--){
+        *(it1 + len_str2) = *it1;
+        it--;
+    }
+
+    // Copy
+    char *it2 = str2;
+
+    while ((*it2) != '\0'){
+        *it1 = *it2;
+
+        it1++;
+        it2++;
+    }
 }
