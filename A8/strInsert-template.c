@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int strInsert(char strl[], const char str2[], int pos);
+int strInsert(char str1[], const char str2[], int pos);
 
 int main() {
     char name[100] = "Hans!",
@@ -13,10 +13,13 @@ int main() {
 
     printf("'%s' inserted at position 6 in '%s'\n", s2, name);
     strInsert(name, s2,6);
-    puts(name);
+    puts(name); 
     return 0;
 }
 
 int strInsert(char str1[], const char str2[], int pos) {
+
+    if pos
+
     /* TODO: your code goes here */
 }
