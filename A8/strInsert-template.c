@@ -22,7 +22,7 @@ int strInsert(char str1[], const char str2[], int pos) {
     int len_str1 = strlen(str1);
     int len_str2 = strlen(str2);
 
-    int len_arr_str1 = sizeof(str1)/sizeof(str1[0]);
+    int len_arr_str1 = 100; //sizeof(str1)/sizeof(str1[0]);
 
     if(pos < 0 ||
         pos > len_str1 + 1 ||
@@ -34,7 +34,7 @@ int strInsert(char str1[], const char str2[], int pos) {
     
     for(int i = len_str1 - pos; i != 0; i--){
         *(it1 + len_str2) = *it1;
-        it--;
+        it1--;
     }
 
     // Copy
